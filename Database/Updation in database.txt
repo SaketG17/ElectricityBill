@@ -1,0 +1,35 @@
+-- Add cust_id column to Bill table
+ALTER TABLE Bill
+ADD COLUMN cust_id INT(5),
+ADD FOREIGN KEY (cust_id) REFERENCES Customer(cust_id) ON DELETE CASCADE;
+
+---Updating the values of cust_id in Bill table
+UPDATE Bill
+SET cust_id = 
+    CASE 
+        WHEN bill_id = 5097 THEN 111
+        WHEN bill_id = 5098 THEN 112
+        WHEN bill_id = 5099 THEN 113
+        WHEN bill_id = 5100 THEN 301
+        WHEN bill_id = 5101 THEN 333
+        ELSE NULL -- Set default value if needed
+    END;
+
+
+
+-- Add cust_id column to Payment table
+ALTER TABLE Payment
+ADD COLUMN cust_id INT(5),
+ADD FOREIGN KEY (cust_id) REFERENCES Customer(cust_id) ON DELETE CASCADE;
+
+---Updating the Payment Table
+UPDATE Payment
+SET cust_id = 
+    CASE 
+        WHEN bill_id = 5097 THEN 111
+        WHEN bill_id = 5098 THEN 112
+        WHEN bill_id = 5099 THEN 113
+        WHEN bill_id = 5100 THEN 301
+        WHEN bill_id = 5101 THEN 333
+        ELSE NULL -- Set default value if needed
+    END;

@@ -1,0 +1,14 @@
+https://github.com/MohithKumar10/Electricity-Bill-Management-System
+
+
+Logged in customer
+print Bill
+show outstanding amount
+at least 5 tables
+views
+triggers
+all tables must be conneceted
+CRUD Operation
+
+create
+update and delete

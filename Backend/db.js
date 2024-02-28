@@ -12,6 +12,7 @@ const connectDB = ()=>{
         if (err) throw err;
         console.log("Connected!");
     });
+    con.query("use saket1");
     return con;
 }
 
